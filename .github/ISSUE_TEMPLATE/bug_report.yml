@@ -1,0 +1,19 @@
+name: Bug or inaccurate analysis
+description: Report a broken skill reference or repeatable analysis issue
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What failed?
+      description: Redact names, credentials, and sensitive business details
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal non-sensitive example
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior

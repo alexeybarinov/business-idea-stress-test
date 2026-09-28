@@ -1,0 +1,14 @@
+name: Improvement proposal
+description: Suggest an evidence-based improvement to the workflow
+labels: [enhancement]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: What decision would this improve?
