@@ -4,7 +4,7 @@ description: "Run a one-off, evidence-based stress test of a proposed business o
 license: MIT
 compatibility: "Designed for ChatGPT with web research and file analysis when available; adaptable to other Agent Skills clients. No third-party APIs or executable dependencies are required for the skill to run."
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   language: "en"
   workflow: "one-off idea validation"
 ---

@@ -44,3 +44,11 @@ After a pull request is reviewed and merged, update `VERSION`, `SKILL.md` metada
 - [ ] New factual claims cite trustworthy sources or are labeled as hypotheses
 - [ ] Both local validation and packaging succeed
 - [ ] CHANGELOG and version metadata are synchronized if releasing
+
+## Demonstrations, sources and community material
+
+- Follow the [worked showcase](docs/showcase.md): explicitly distinguish simulated founder answers from checked real-world sources and scenario mathematics
+- If editing the showcase, recheck cited public pages and update the observation date; never present competitor advertisements as transaction volumes or real buyer research
+- Run the [maintainer smoke-test checklist](docs/maintenance.md) before asserting host compatibility
+- Respect [community guidance](docs/community.md) when sharing public examples, and do not submit the project to third-party catalogs without the repository owner's direction
+- For visual changes, keep `assets/social-preview.jpg` in 1280 × 640 JPEG format below 1 MB; uploading it to the GitHub Social Preview setting remains a separate manual action

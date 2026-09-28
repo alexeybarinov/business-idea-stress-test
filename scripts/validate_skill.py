@@ -3,6 +3,7 @@
 from pathlib import Path
 import re
 import sys
+import struct
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,6 +44,8 @@ required = [
     "README.md", "LICENSE", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md",
     "assets/icon.png", "assets/icon-small.svg", "assets/header.svg", "agents/openai.yaml",
     "docs/installation.md", "docs/quickstart.md", "docs/faq.md",
+    "docs/showcase.md", "docs/distribution.md", "docs/community.md", "docs/maintenance.md",
+    "assets/social-preview.jpg",
     "examples/example-session.md", "references/intake.md", "references/validation.md",
     "references/market.md", "references/customer.md", "references/competition.md",
     "references/finance.md", "references/red-team.md", "references/report.md", "references/sources.md",
@@ -65,6 +68,19 @@ expect(not ui.get("dependencies"), "The instruction-only bundle should not decla
 icon_bytes = (ROOT / "assets/icon.png").read_bytes()
 expect(icon_bytes.startswith(b"\x89PNG\r\n\x1a\n"), "Logo file is not a PNG")
 expect(len(icon_bytes) < 250000, "Icon should be below 250 KB")
+
+# Validate the actual GitHub sharing image, not just a placeholder filename.
+preview_path = ROOT / "assets/social-preview.jpg"
+if preview_path.is_file():
+    preview_bytes = preview_path.read_bytes()
+    expect(preview_bytes.startswith(b"\xff\xd8"), "Social Preview must be a valid JPEG header")
+    expect(len(preview_bytes) < 1_000_000, "Social Preview must be below GitHub's 1 MB recommendation")
+    sof = preview_bytes.find(b"\xff\xc0")
+    if sof > -1 and sof + 9 <= len(preview_bytes):
+        height, width = struct.unpack(">HH", preview_bytes[sof + 5: sof + 9])
+        expect((width, height) == (1280, 640), f"Unexpected Social Preview size: {width}x{height}")
+    else:
+        expect(False, "Social Preview must contain JPEG baseline SOF dimensions")
 
 # Validate relative links across the README, all guides and seven localized pages.
 # External URLs, mailto links and in-page anchors are intentionally excluded.
@@ -96,4 +112,4 @@ if ERRORS:
     for message in ERRORS:
         print("ERROR:", message)
     sys.exit(1)
-print(f"PASS: schema, v{version}, OpenAI icons, {len(docs)} documentation files and 8-language navigation")
+print(f"PASS: schema, v{version}, OpenAI icons, Social Preview JPEG, {len(docs)} documentation files and 8-language navigation")

@@ -2,6 +2,26 @@
 
 All notable changes are documented here. Versioning follows [Semantic Versioning](https://semver.org/). Dates are in YYYY-MM-DD format.
 
+## [1.2.0] — 2026-09-28
+
+### Added
+
+- Purpose-built 1280 × 640 Social Preview image for repository owners to upload from GitHub Settings (not automatically applied to repository settings)
+- Full six-stage worked demonstration using clearly simulated founder responses and illustrative financial inputs alongside three real, dated Portland public-sector/competitor sources
+- Catalog-ready, transparent distribution checklist and listing copy (no third-party sites submitted or claimed)
+- Community support guide with recommended Discussions categories and an editable welcome post; Discussions still require the repository owner to enable them
+- Maintainer verification guide and automated JPEG size/dimension checks
+
+### Changed
+
+- More discoverable, keyword-natural README introduction and navigation to the showcase, community information, preview artwork and distribution kit
+- Clarified separation between documented installation procedures, validated bundle structure and real end-to-end host testing
+
+### Compatibility
+
+- **Documentation, distribution and visual update only.** Six-stage analytical behavior and paid-tool requirements are unchanged
+- Existing v1.1.0 release remains available for rollback. No external directories or communities have been posted to automatically
+
 ## [1.1.0] — 2026-09-28
 
 ### Added

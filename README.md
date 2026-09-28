@@ -6,7 +6,7 @@
 
 **Don't fall in love with your business idea. Stress-test it.**
 
-One open-source Agent Skill to interrogate an idea, investigate demand and competition, test the numbers, uncover uncomfortable risks, and design the cheapest meaningful experiment **before you invest serious time or money**
+**Open-source AI business idea validator** for ChatGPT, Codex, Claude Code and other compatible agents. Interview the founder, investigate real demand and competitors, model unit economics, challenge risky assumptions, and design the cheapest meaningful test **before investing serious time or money**
 
 [English](README.md) · [Русский](locales/README.ru.md) · [简体中文](locales/README.zh-CN.md) · [Español](locales/README.es.md) · [Deutsch](locales/README.de.md) · [Français](locales/README.fr.md) · [Português (Brasil)](locales/README.pt-BR.md) · [日本語](locales/README.ja.md)
 
@@ -16,7 +16,7 @@ One open-source Agent Skill to interrogate an idea, investigate demand and compe
 [![License: MIT](https://img.shields.io/badge/license-MIT-22c55e?style=flat-square)](LICENSE)
 [![No paid API required](https://img.shields.io/badge/paid%20API-not%20required-64748b?style=flat-square)](docs/faq.md)
 
-[**Install**](#-install-in-your-ai-assistant) · [**Quick start**](docs/quickstart.md) · [**Example**](examples/example-session.md) · [**FAQ**](docs/faq.md) · [**Credits**](#-standing-on-the-shoulders-of-the-community) · [**Releases**](https://github.com/alexeybarinov/business-idea-stress-test/releases)
+[**Install**](#-install-in-your-ai-assistant) · [**Quick start**](docs/quickstart.md) · [**Worked showcase**](docs/showcase.md) · [**FAQ**](docs/faq.md) · [**Credits**](#-standing-on-the-shoulders-of-the-community) · [**Releases**](https://github.com/alexeybarinov/business-idea-stress-test/releases)
 
 </div>
 
@@ -84,6 +84,12 @@ Challenge my assumptions before I commit time or money.
 
 Not sure what to provide? Say **“I don't know”**. The interview is designed to record that uncertainty instead of guessing. See the [full quick-start guide](docs/quickstart.md) and a [clearly fictional interview example](examples/example-session.md) and [illustrative report](examples/sample-output.md).
 
+## 📖 See a worked demonstration
+
+**[Explore the six-stage mobile bicycle repair showcase](docs/showcase.md)**: an explicitly simulated founder interview combined with **real, dated primary and competitor sources** from Portland, Oregon. Follow the evidence labels, competitor reality check, worked financial scenarios, red-team critique and bounded pilot. Simulated customer answers and costs are clearly distinguished from independently sourced facts; the showcase is **not** evidence that the example business would succeed
+
+If you want a fast first look, open the [fictional conversation sample](examples/example-session.md), then the [full illustrative report](examples/sample-output.md). If you want to share the skill with others, see the [distribution guide](docs/distribution.md) and download the [GitHub social preview](assets/social-preview.jpg)
+
 ## 🔍 How the six-stage stress test works
 
 ```text
@@ -138,6 +144,11 @@ See [FAQ and limitations](docs/faq.md), [evidence handling](references/report.md
 | [Fictional example session](examples/example-session.md) | The skill's questioning style and treatment of unknowns |
 | [Illustrative final output](examples/sample-output.md) | Evidence ledger, transparent hypothetical calculations, red-team critique and a conditional next step |
 | [Stage references](references/) | Nine focused files read on demand, not dumped into every interaction |
+| [Worked showcase with real public sources](docs/showcase.md) | Six-stage example: transparent source ledger, competitors, financial sensitivity and pilot design |
+| [Discovery and directory kit](docs/distribution.md) | Truthful catalog description, install command, canonical links and directory checklist; no external posting |
+| [Community and welcome post](docs/community.md) | What belongs in Issues versus Discussions, recommended categories and a draft welcome message |
+| [Verification and maintenance](docs/maintenance.md) | Repeatable local checks, host smoke-test protocol and versioned release checklist |
+| [Social Preview artwork](assets/social-preview.jpg) | 1280 × 640 repository-sharing image for the owner to upload via GitHub Settings |
 | [Changelog](CHANGELOG.md) | Release history |
 | [Contributing](CONTRIBUTING.md) | Corrections, localization updates and maintainer quality checks |
 
@@ -158,6 +169,12 @@ business-idea-stress-test/
 ├── CHANGELOG.md
 └── LICENSE
 ```
+
+## 🤝 Community and project visibility
+
+Found an unsupported claim, install issue, missing regulatory risk or inaccurate translation? [Open an issue](https://github.com/alexeybarinov/business-idea-stress-test/issues/new/choose). For open-ended Q&A and sanitized use-case stories, visit [Discussions](https://github.com/alexeybarinov/business-idea-stress-test/discussions) **after the repository owner enables it**. See [community guidance and the prepared welcome post](docs/community.md)
+
+For directory maintainers and people sharing this skill, the [distribution kit](docs/distribution.md) provides a reusable, accuracy-checked summary and install link. No installations, directory placements or endorsements are asserted without independent confirmation
 
 ## ❤️ Standing on the shoulders of the community
 
