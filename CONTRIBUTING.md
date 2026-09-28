@@ -24,9 +24,10 @@ The packaging script produces `dist/business-idea-stress-test-vX.Y.Z.zip` with o
 ## Change rules
 
 - Keep the required `SKILL.md` YAML frontmatter valid according to the [Agent Skills specification](https://agentskills.io/specification)
-- Write instructions and documentation in clear, accessible **English**. The skill may still answer users in their preferred language
+- Keep **SKILL.md**, `references/`, and the canonical README/technical docs in clear English. Translate the user-facing guides in `locales/` to the corresponding language without changing the meaning or promising unverified features. The skill may answer users in their preferred language
 - Preserve relative references from `SKILL.md`; small focused `references/*.md` files should be loaded only when needed
 - Mark facts, external estimates, calculations, hypotheses, and unknowns separately; no invented citations or fabricated user studies
+- Keep the 8-language navigation in the canonical README and every localized README synchronized; check cross-links and installation commands when changing them
 - Record user-visible changes in `CHANGELOG.md`
 - If semantics change, update `VERSION`, matching `SKILL.md` metadata. Use major/minor/patch based on the impact
 - Include a suggested prompt and a before/after expected behavior when changing the analytical workflow
@@ -39,7 +40,7 @@ After a pull request is reviewed and merged, update `VERSION`, `SKILL.md` metada
 
 - [ ] A concrete user-facing failure or improvement is explained
 - [ ] No unlicensed upstream material was copied
-- [ ] Documentation and new instructions are English-language
+- [ ] Canonical instructions and technical documentation are in English; localized guides are accurately maintained when impacted
 - [ ] New factual claims cite trustworthy sources or are labeled as hypotheses
 - [ ] Both local validation and packaging succeed
 - [ ] CHANGELOG and version metadata are synchronized if releasing

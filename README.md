@@ -1,190 +1,187 @@
 <div align="center">
-  <img src="assets/icon.png" alt="Business Idea Stress Test: business advisors examining a bright idea" width="140" height="140">
 
-  # Business Idea Stress Test
+<img src="assets/icon.png" alt="Business Idea Stress Test logo: a bright business idea reviewed by a panel" width="128" height="128">
 
-  **Don't fall in love with your business idea. Stress-test it.**
+# Business Idea Stress Test
 
-  An open-source, evidence-first **ChatGPT / Agent Skills** workflow that challenges a business concept *before* you invest serious time or money.
+**Don't fall in love with your business idea. Stress-test it.**
 
-  ![Version](https://img.shields.io/badge/version-v1.0.0-2563eb?style=flat-square)
-  ![Skill](https://img.shields.io/badge/format-Agent%20Skills-0f766e?style=flat-square)
-  ![License](https://img.shields.io/badge/license-MIT-22c55e?style=flat-square)
-  ![Dependencies](https://img.shields.io/badge/runtime%20dependencies-none-64748b?style=flat-square)
+One open-source Agent Skill to interrogate an idea, investigate demand and competition, test the numbers, uncover uncomfortable risks, and design the cheapest meaningful experiment **before you invest serious time or money**
 
-  [**Install**](#installation) · [**How it works**](#the-six-stage-stress-test) · [**Example prompts**](#example-prompts) · [**Acknowledgments**](#standing-on-the-shoulders-of-the-community) · [**Releases**](#versioning-and-releases)
+[English](README.md) · [Русский](locales/README.ru.md) · [简体中文](locales/README.zh-CN.md) · [Español](locales/README.es.md) · [Deutsch](locales/README.de.md) · [Français](locales/README.fr.md) · [Português (Brasil)](locales/README.pt-BR.md) · [日本語](locales/README.ja.md)
+
+[![Latest release](https://img.shields.io/github/v/release/alexeybarinov/business-idea-stress-test?label=release&style=flat-square)](https://github.com/alexeybarinov/business-idea-stress-test/releases/latest)
+[![Validation](https://img.shields.io/github/actions/workflow/status/alexeybarinov/business-idea-stress-test/validate.yml?branch=main&label=validation&style=flat-square)](https://github.com/alexeybarinov/business-idea-stress-test/actions/workflows/validate.yml)
+[![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-0f766e?style=flat-square)](https://agentskills.io/specification)
+[![License: MIT](https://img.shields.io/badge/license-MIT-22c55e?style=flat-square)](LICENSE)
+[![No paid API required](https://img.shields.io/badge/paid%20API-not%20required-64748b?style=flat-square)](docs/faq.md)
+
+[**Install**](#-install-in-your-ai-assistant) · [**Quick start**](docs/quickstart.md) · [**Example**](examples/example-session.md) · [**FAQ**](docs/faq.md) · [**Credits**](#-standing-on-the-shoulders-of-the-community) · [**Releases**](https://github.com/alexeybarinov/business-idea-stress-test/releases)
+
 </div>
 
-![Business Idea Stress Test cover: interview, demand, competitors, finances, adversarial review](assets/header.svg)
+![Six-stage business idea analysis: interview, validation, market, finance, adversarial review and decision](assets/header.svg)
 
 > [!IMPORTANT]
-> This project is a **critical-thinking workflow, not a business-success predictor**. Every decisive claim should be linked to evidence or labeled as an assumption. One AI model simulating multiple viewpoints is **not** an independent panel of experts.
+> **This is an evidence-first thinking workflow, not an autonomous board of directors or a prediction of business success.** When the host has no live research tools, the skill must clearly flag missing evidence. Seven credited projects *inspired* this independent implementation; their skill packages are **not bundled or automatically executed**.
 
-## What problem does it solve?
+## 🎯 Why this exists
 
-A business idea can sound compelling before anyone asks the expensive questions: Does a real buyer have this problem? Who currently solves it? Why switch? What does customer acquisition cost? Can the operation fulfill the promise? What would make the founder walk away?
+Most business ideas sound convincing until someone asks the costly questions: **Does the buyer actually care? Who already solves this problem? What will acquisition and fulfillment cost? What's the weakest assumption? When should you stop?**
 
-**Business Idea Stress Test** turns those questions into a one-off process instead of producing a glossy business plan with optimistic numbers. It interviews the founder, researches external evidence when supported by the host, scrutinizes unit economics, and designs a cheap experiment that could actually *disprove* the thesis.
+Business Idea Stress Test is designed for **one-off, pre-investment validation**, not recurring executive meetings or a promotional business plan. It interviews the founder, checks external evidence *when tools permit*, examines unit economics, and challenges the positive case before proposing a bounded real-world test.
 
-### What you get
-
-| Capability | Outcome |
+| What the skill checks | What you get |
 |---|---|
-| Founder interview | Structured idea brief and explicit unanswered questions |
-| Early validation | Key hypothesis, real substitutes, potential fatal blockers |
-| Market and buyer research | Geographic market boundaries, customer pain and evidence gaps |
-| Competitor profiling | Documented alternatives with comparable, dated prices where available |
-| Financial and operational review | Worked unit economics, cash exposure, capacity, and conditional scenarios |
-| Adversarial critique | Strongest argument against the idea and 12-month failure pre-mortem |
-| Decision brief | Conditional evidence assessment and a bounded, measurable test |
+| Founder assumptions | A structured idea brief and high-impact unanswered questions |
+| Core business hypothesis | Potential fatal blockers, realistic alternatives, falsifiable assumptions |
+| Demand, buyers, competitors | Source-traceable market research and identified evidence gaps |
+| Numbers and operations | Explicit financial scenarios, break-even conditions and cash exposure |
+| The opposing case | Skeptical buyer, incumbent, financial and operational viewpoints |
+| Decision conditions | A conditional assessment and a low-cost test with success/stop criteria |
 
-## The six-stage stress test
+## ⚡ Install in your AI assistant
 
-```text
-            YOUR IDEA
-                │
-     1. FOUNDER INTERVIEW
-        One question at a time
-                │
-     2. EARLY VALIDATION
-        Hypotheses + fatal blockers
-                │
-     3. EXTERNAL RESEARCH
-        Market · Buyers · Competitors
-                │
-     4. FINANCIAL REALITY
-        Unit economics · Cash · Capacity
-                │
-     5. ADVERSARIAL REVIEW
-        Strongest countercase · Pre-mortem
-                │
-     6. DECISION & LEAN TEST
-        Evidence · Test budget · Stop rules
-```
+**Use the method for your actual host.** One installation does not automatically carry across AI products. Full prerequisites, project-only setup, Windows/manual installation, updates and verification are in the **[multi-platform installation guide](docs/installation.md)**.
 
-The workflow is **adaptive**. A serious early blocker may change the research order. Missing market or finance data must remain visibly missing rather than being filled with fictional statistics.
+| Host | Quick installation / action |
+|---|---|
+| **ChatGPT** | [Download the latest skill-only ZIP](https://github.com/alexeybarinov/business-idea-stress-test/releases/latest) → **Plugins → Skills → Create → Upload from your computer**, if available |
+| **Codex CLI / IDE** | `npx skills add alexeybarinov/business-idea-stress-test -g -a codex` |
+| **Claude Code** | `npx skills add alexeybarinov/business-idea-stress-test -g -a claude-code` |
+| **Claude.ai (web)** | Upload the [release ZIP](https://github.com/alexeybarinov/business-idea-stress-test/releases/latest) in **Customize → Skills** (eligible accounts) |
+| **Gemini CLI** | `gemini skills install https://github.com/alexeybarinov/business-idea-stress-test.git` |
+| **Cursor** | `npx skills add alexeybarinov/business-idea-stress-test -g -a cursor` |
+| **GitHub Copilot** | `npx skills add alexeybarinov/business-idea-stress-test -g -a github-copilot` |
+| **OpenCode / more** | `npx skills add alexeybarinov/business-idea-stress-test` → select your agent |
 
-## Installation
-
-### Option A — ChatGPT Skills
-
-1. Download the skill-only ZIP from the project's **GitHub Releases** page (after the first release is published). The archive is named `business-idea-stress-test-vX.Y.Z.zip`
-2. In ChatGPT, open **Plugins → Skills** and select the option to **create/upload a skill** if your workspace supports it
-3. Upload the ZIP, review the permissions/instructions shown, and complete the installation
-4. Open a **new chat for each business idea** and type: `Use Business Idea Stress Test. I want to stress-test a business idea. Start by interviewing me.`
-
-ChatGPT availability and menu wording may vary by plan and workspace. Refer to [OpenAI's current Skills guidance](https://help.openai.com/en/articles/20001066-skills-in-chatgpt). No upstream commercial service is required merely to run these instructions
-
-### Option B — Another compatible Agent Skills client
-
-If your client supports the [open Agent Skills format](https://agentskills.io/specification), place the repository's `SKILL.md`, `references/`, and optional `assets/` in one folder named `business-idea-stress-test`, then follow **your client's** skill discovery/install instructions. Automatic activation and the precise install command depend on the host
+**Node.js / `npx` is only needed for the universal CLI installer**, not to run this instruction-only skill. ChatGPT/Claude.ai ZIP upload does not require it. The skill has **no paid API or runtime Python requirement**, but real market research depends on your host's available browsing tools and your provided evidence.
 
 > [!NOTE]
-> The skill does not require locally installing the seven projects that inspired it. Their ideas were adapted into newly written instructions; their code, paid APIs, and original skill files are **not bundled**
+> Compatibility is based on the open Agent Skills format and the linked host installation documentation. Our CI verifies the **bundle's structure**, not successful execution in every third-party AI client, subscription tier or tool configuration. See [compatibility caveats and troubleshooting](docs/faq.md).
 
-## Example prompts
+**Try first, then install:** inspect the [SKILL.md](SKILL.md) and [stage-by-stage reference files](references/) before enabling any external skill.
 
-**Start with a blank slate**
+## 🚀 Start your first session
 
-```text
-Use Business Idea Stress Test. I have a new business idea.
-Ask me one important question at a time. Research the market only when
-we've resolved the basic assumptions. I want an evidence-based result,
-not automatic encouragement.
-```
-
-**Start with context**
+Open a **new conversation for each unrelated idea**, explicitly select/invoke the installed skill, then paste:
 
 ```text
-Stress-test this idea: [description]
-Target buyers: [segment / unknown]
-Location: [country / city]
-Available starting budget: [amount / unknown]
-My biggest worry: [risk / unknown]
-Begin with the missing high-impact questions.
+Use Business Idea Stress Test. Here's my business idea:
+[Describe the product or service and the audience as you understand them.]
+
+Start with the founder interview, one high-impact question at a time.
+I don't have all the answers yet. Distinguish evidence from guesses.
+Challenge my assumptions before I commit time or money.
 ```
 
-**Continue or challenge harder**
+| Host | Explicit invocation example |
+|---|---|
+| ChatGPT | Select `@Business Idea Stress Test` if the skill picker is available, or ask to use it by name |
+| Codex | `$business-idea-stress-test Interview me about my idea` |
+| Claude Code | `/business-idea-stress-test Challenge my idea` |
+| Gemini, Cursor, Copilot, other hosts | Explicitly ask: `Use business-idea-stress-test. Start with the founder interview` |
+
+Not sure what to provide? Say **“I don't know”**. The interview is designed to record that uncertainty instead of guessing. See the [full quick-start guide](docs/quickstart.md) and a [clearly fictional interview example](examples/example-session.md) and [illustrative report](examples/sample-output.md).
+
+## 🔍 How the six-stage stress test works
 
 ```text
-Continue with the next unfinished stage.
-Grill harder: challenge the three assumptions most likely to overturn the conclusion.
-Show your evidence ledger and identify the weak sources.
-Re-evaluate the conclusion using these new customer interview notes: [notes]
+ YOUR IDEA
+    │
+    ▼
+ ① FOUNDER INTERVIEW       Ask important questions one at a time
+    │
+    ▼
+ ② EARLY VALIDATION       Challenge core assumptions and fatal blockers
+    │
+    ▼
+ ③ EXTERNAL RESEARCH      Market + real buyers + direct/indirect competition
+    │
+    ▼
+ ④ FINANCIAL REALITY      Unit economics + working capital + sensitivity
+    │
+    ▼
+ ⑤ ADVERSARIAL REVIEW    Strongest counterargument + failure pre-mortem
+    │
+    ▼
+ ⑥ CONDITIONAL DECISION  Evidence gaps + cheapest meaningful test + stop rules
 ```
 
-## Built-in safeguards
+**Adaptive by design.** If the founder cannot legally provide the service or cannot fulfill the core promise, that blocker is examined *before* extensive speculative research. The skill does not require ritual approval between stages but pauses for essential unanswered questions and user consent for real-world actions.
 
-- **Evidence ledger:** distinguish **F** (verified fact, labeled by origin), **E** (dated external estimate), **C** (transparent calculation), **H** (untested hypothesis), and **U** (unknown)
-- **No invented research:** no fictional buyers, unsupported competitor numbers, fake sources, synthetic interviews masquerading as real customers, or unmeasured CAC presented as observed
-- **Finance clarity:** GMV is not automatically intermediary revenue; revenue is not profit; profit is not cash flow; conservative/base/upside cases are *scenarios*, not guaranteed forecasts
-- **Geographic and legal boundaries:** match research to the user's actual market; consult current primary material for regulatory questions; flag issues requiring professional advice
-- **No phantom agents:** multiple decision-making perspectives inside one model do not constitute independent AI models or real human advisors
-- **Consent and realistic tools:** no unsolicited customer contact, spending, subscriptions, or claimed paid-API access without authorization and actual tool support
+### Expected outputs
 
-## Repository layout
+An idea brief, an evidence ledger, a dated competitor comparison, a transparent financial model, a risk register, the strongest defensible argument against the idea, and a **conditional** evaluation with low-cost experiments. Outputs are proportional to the available information, market and business model. A missing number stays missing.
+
+## 🛡️ Built-in evidence and privacy safeguards
+
+| Marker | Meaning |
+|---|---|
+| **F** | Verified external fact or correctly recorded founder input, with origin clearly distinguished |
+| **E** | Dated external estimate, with source and method |
+| **C** | Transparent calculation with displayed assumptions and inputs |
+| **H** | Untested hypothesis requiring a real-world test |
+| **U** | Unknown or unverified information |
+
+The skill must not fabricate customer interviews, source URLs, market figures, competitor prices, measured CAC/LTV or claims of access to paid tools. Multiple viewpoints inside one AI are **not independent people or separately executed models**. Regulatory facts require appropriate current sources; high-stakes decisions may need human specialist review. Never submit confidential customer records, passwords or unnecessary sensitive details to an AI provider without assessing its data policy.
+
+See [FAQ and limitations](docs/faq.md), [evidence handling](references/report.md) and [responsible reporting](SECURITY.md).
+
+## 🧭 Documentation
+
+| Guide | What's inside |
+|---|---|
+| [Multi-platform installation](docs/installation.md) | ChatGPT, Codex, Claude Code, Claude.ai, Gemini CLI, Cursor, Copilot, OpenCode, manual setup, update/remove |
+| [Quick start](docs/quickstart.md) | First message, what to answer, reviewing sources and continuing later |
+| [FAQ & troubleshooting](docs/faq.md) | Plan limitations, missing skill, research permissions, duplicate installs, privacy, version pinning |
+| [Fictional example session](examples/example-session.md) | The skill's questioning style and treatment of unknowns |
+| [Illustrative final output](examples/sample-output.md) | Evidence ledger, transparent hypothetical calculations, red-team critique and a conditional next step |
+| [Stage references](references/) | Nine focused files read on demand, not dumped into every interaction |
+| [Changelog](CHANGELOG.md) | Release history |
+| [Contributing](CONTRIBUTING.md) | Corrections, localization updates and maintainer quality checks |
+
+### Maintainer-friendly repository layout
 
 ```text
 business-idea-stress-test/
-├── SKILL.md                    # Entrypoint for compatible AI agents
-├── references/                 # Loaded as each stage becomes relevant
-│   ├── intake.md
-│   ├── validation.md
-│   ├── market.md
-│   ├── customer.md
-│   ├── competition.md
-│   ├── finance.md
-│   ├── red-team.md
-│   ├── report.md
-│   └── sources.md               # Full upstream credits + scope limitations
-├── assets/
-│   ├── icon.png                 # Visual mark, generated for this project
-│   └── header.svg               # GitHub README artwork
-├── examples/
-│   └── example-session.md
-├── scripts/
-│   ├── validate_skill.py        # Maintainer-only quality checks
-│   └── package_skill.py         # Creates a skill-only installation ZIP
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   └── workflows/             # CI and versioned GitHub release
-├── VERSION                     # Current SemVer version
+├── SKILL.md                  # Agent Skills entry point (English)
+├── agents/openai.yaml        # Optional OpenAI UI metadata and icon mapping
+├── references/               # Focused methodology, loaded on demand
+├── assets/                   # Logo, cover and small icon
+├── docs/                     # Installation, quick start, FAQ
+├── locales/                  # Seven translated README guides
+├── examples/                 # Clearly marked fictional illustration
+├── scripts/                  # Maintainer validation and ZIP packaging only
+├── .github/workflows/        # Validation and versioned release automation
+├── VERSION                   # SemVer source of truth
 ├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── SECURITY.md
 └── LICENSE
 ```
 
-## Standing on the shoulders of the community
+## ❤️ Standing on the shoulders of the community
 
-**Thank you** to the people who openly published the tools and ideas that inspired this independently written workflow:
+Huge thanks to the creators who published the ideas that inspired this **independently written** workflow:
 
-| Inspiration | Author/project | What influenced this skill |
+| Inspiration | Author/project | Contribution that inspired us |
 |---|---|---|
-| [Grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) | **Matt Pocock** | Sequential, decision-tree questioning |
-| [Idea Validator](https://github.com/BuildGreatProducts/builder-os/blob/main/skills/idea-validator/SKILL.md) | **BuildGreatProducts** | Early hypothesis validation and critical blockers |
-| [Market Researcher](https://github.com/xcrrr/claude-skills/blob/main/skills/business/market-researcher/SKILL.md) | **xcrrr** | Market scope, segmentation, and sizing discipline |
-| [Customer Research](https://github.com/coreyhaines31/marketingskills/blob/main/skills/customer-research/SKILL.md) | **Corey Haines** | Buyer insights grounded in actual evidence |
-| [Competitor Profiling](https://github.com/coreyhaines31/marketingskills/blob/main/skills/competitor-profiling/SKILL.md) | **Corey Haines** | Structured analysis of competitive alternatives |
-| [Startup Analyst](https://github.com/sickn33/agentic-awesome-skills/blob/main/skills/startup-analyst/SKILL.md) | **sickn33** / Agentic Awesome Skills | Startup finance and operational realities |
-| [Devil's Advocate](https://github.com/jukeyman/jukeyman-skills/blob/main/skills/productivity--pm-ai-partner--devil-advocate/SKILL.md) | **jukeyman** | Constructive, rigorous counterarguments |
+| [Grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) | **Matt Pocock** | High-impact, sequential founder questioning |
+| [Idea Validator](https://github.com/BuildGreatProducts/builder-os/blob/main/skills/idea-validator/SKILL.md) | **BuildGreatProducts** | Stress-testing assumptions and critical blockers early |
+| [Market Researcher](https://github.com/xcrrr/claude-skills/blob/main/skills/business/market-researcher/SKILL.md) | **xcrrr** | Geographically relevant market analysis and sizing discipline |
+| [Customer Research](https://github.com/coreyhaines31/marketingskills/blob/main/skills/customer-research/SKILL.md) | **Corey Haines** | Buyer insight grounded in observable evidence |
+| [Competitor Profiling](https://github.com/coreyhaines31/marketingskills/blob/main/skills/competitor-profiling/SKILL.md) | **Corey Haines** | Structured competitor research and comparison |
+| [Startup Analyst](https://github.com/sickn33/agentic-awesome-skills/blob/main/skills/startup-analyst/SKILL.md) | **sickn33** | Early-stage financial and operational scrutiny |
+| [Devil's Advocate](https://github.com/jukeyman/jukeyman-skills/blob/main/skills/productivity--pm-ai-partner--devil-advocate/SKILL.md) | **jukeyman** | Strongest-counterargument and pre-mortem thinking |
 
-We appreciate the original maintainers' work. **This project is unaffiliated with and not endorsed by those authors.** We do not redistribute their original skill files or copy their scripts. See [references/sources.md](references/sources.md) for attribution details and limitations
+This is **not** an official adaptation, partnership or endorsement. We do not package their original skill files or scripts. Each original project keeps its own license. See [full credits and limitations](references/sources.md).
 
-## Versioning and releases
+## 📦 Versioning, contributing and license
 
-This project follows [Semantic Versioning](https://semver.org/):
+Releases use [Semantic Versioning](https://semver.org/): patch versions for compatible fixes, minor versions for new backward-compatible features or substantial distribution additions, and major versions for breaking workflow changes. A new `VERSION` on `main` triggers the release workflow, which creates a new Git tag, GitHub Release and installable ZIP (subject to GitHub Actions permissions). Existing tags are never overwritten.
 
-- **Patch:** `v1.0.1` — clarifications and fixes that preserve the intended workflow
-- **Minor:** `v1.1.0` — new optional capabilities or backward-compatible workflow extensions
-- **Major:** `v2.0.0` — meaningful breaking changes to usage, outputs, or skill structure
+- [Latest release and versioned ZIP](https://github.com/alexeybarinov/business-idea-stress-test/releases/latest)
+- [What changed](CHANGELOG.md)
+- [Suggest a feature, correction or translation improvement](https://github.com/alexeybarinov/business-idea-stress-test/issues)
+- [Contributor guide](CONTRIBUTING.md) · [Security guidance](SECURITY.md)
 
-`VERSION` and `SKILL.md` metadata must match. Changes are documented in [CHANGELOG.md](CHANGELOG.md). The CI validates files on each push/PR, and the GitHub Actions release workflow can create a versioned tag, GitHub Release, and skill-only ZIP **when a new VERSION is pushed to the default branch** (subject to the repository's Actions permissions and settings)
-
-## Contributing and security
-
-- Found an error, missing risk category, outdated assumption, or broken source? Open an issue using the included templates
-- See [CONTRIBUTING.md](CONTRIBUTING.md) to propose changes and run the maintainer checks
-- Read [SECURITY.md](SECURITY.md) before reporting sensitive security problems
-
-**License:** [MIT](LICENSE), applying to the original files in this repository. Each linked upstream project retains its own license
+**License:** [MIT](LICENSE) for original files in this repository. Third-party linked works retain their respective licenses

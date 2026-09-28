@@ -1,0 +1,32 @@
+name: Translation correction
+about: Suggest a fix or improvement for a translated README
+labels: [documentation]
+body:
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Russian (ru)
+        - Simplified Chinese (zh-CN)
+        - Spanish (es)
+        - German (de)
+        - French (fr)
+        - Brazilian Portuguese (pt-BR)
+        - Japanese (ja)
+        - English (source)
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current passage / broken link
+      description: Provide the relevant passage, section name or link without confidential content
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested correction and reason
+    validations:
+      required: true

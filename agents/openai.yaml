@@ -1,0 +1,9 @@
+interface:
+  display_name: "Business Idea Stress Test"
+  short_description: "Evidence-first, one-off stress test of a business idea"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon.png"
+  brand_color: "#16365D"
+  default_prompt: "Stress-test my new business idea. Start with one high-impact founder interview question."
+policy:
+  allow_implicit_invocation: true
